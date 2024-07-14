@@ -1,0 +1,45 @@
+/* Tabs */
+.tab {
+    overflow: hidden;
+    border: 1px solid #287442;
+    background-color: #287442;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    color: white;
+}
+
+/* Make it so that when you hover over a tab, it is highlighted */
+.tab button:hover {
+    background-color: #30884f;
+}
+
+/* Make it so that when you have a tab selected, the colour indicates so */
+.tab button.active {
+    background-color: #30884f;
+}
+
+/* Make it so that when the tab is not selected, the content is hidden */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #30884f;
+    border-top: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #30884f;
+}
+
+.canvas {
+    height: 500px;
+
+}

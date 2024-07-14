@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hibs</title>
+
+    <!-- JQuery Import - datatables-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <!-- Datatables imports - tables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css" />
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"> </script>
+
+    <!-- Chart.js import - charts and graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Leaflet import - maps -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+    <!-- For the main template -->
+    <link rel="stylesheet" href="../styles/index.css">
+
+    <!-- For the main styling -->
+    <link rel="stylesheet" href="../Styles/main.css">
+    
+    <!-- For the tabs styling -->
+    <link rel="stylesheet" href="../Styles/tabs.css">
+
+    <!-- For the specific javascript-->
+    <script src="../javascripts/ohora.js"></script>
+
+    <!-- For the tabs javascript -->
+    <script src="../JavaScripts/tabs.js"></script>
+
+    <!-- For the header javascript-->
+    <script src="../javascripts/header.js"></script>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="left-side side">
+          <div class="left-slide">
+    
+            <div class="imageContainer">
+              <img src="../Assets/Sliders/bursik.png" id="img-1">
+              <div class="captionText"></div>
+            </div>
+      
+            <div class="imageContainer">
+              <img src="../Assets/Sliders/ohora.png" id="img-2">
+              <div class="captionText"></div>
+            </div>
+      
+            <div class="imageContainer">
+              <img src="../Assets/Sliders/ekpiteta.png" id="img-3">
+              <div class="captionText"></div>
+            </div>
+          
+          </div>
+        </div>
+    
+        <div class="headerText">
+          <h1>Hibernian FC Signings</h1>
+          <h2>Warren 'Hora</h2>
+        </div>
+    
+        <div class="right-side side">
+          <div class="right-slide">
+    
+            <div class="imageContainer">
+              <img src="../Assets/Sliders/bursikShirt.png" id="img-4">
+              <div class="captionText"></div>
+            </div>
+      
+            <div class="imageContainer">
+              <img src="../Assets/Sliders/ohoraShirt.png" id="img-5">
+              <div class="captionText"></div>
+            </div>
+      
+            <div class="imageContainer">
+              <img src="../Assets/Sliders/ekpitetaShirt.png" id="img-6">
+              <div class="captionText"></div>
+            </div>
+          
+          </div>
+    
+        </div>
+    
+      </div>
+
+    <div class="navigationBar">
+        <a href="bursik.html">Josef Bursik Stats</a>
+        <a href="ohora.html">Warren O'Hora Stats</a>
+        <a href="ekpiteta.html">Marvin Ekpiteta Stats</a>
+        <a href="index.html" class="rightTab">Home</a>
+        <a href="gallery.html" class="rightTab">Image Gallery</a>
+        <a href="contact.html" class="rightTab">Contact Us</a>
+    </div>
+
+    <div class="main">
+
+        <div class="playerStats">
+
+            <div class="playerStatsHeader">
+                <h2>Player Performace Stats</h2>
+                <p>The radar outlines Warren O'Hora's attributes over 3 years, and the pie chart represents the proportion of save success inside and outside the box.</p>   
+            </div>
+            
+            <!-- Making my tabs to switch through the stats-->
+            <div class="tabContainer">
+
+                <div class="tab">
+                    <button id="defaultOpen" class="tablinks" onclick="openTab(event, 'ohoraRadar')">Attributes</button>
+                    <button class="tablinks" onclick="openTab(event, 'ohoraPie')">Duel Success</button>
+                    <button class="tablinks" onclick="openTab(event, 'ohoraBubble')">Interceptions</button>
+                </div>
+
+                <div id="ohoraRadar" class="tabcontent">
+                    <div class="playerStatsRadar tabItem"><canvas id="playerStatsRadar" class="canvas"></canvas></div>
+                </div>
+
+                <div id="ohoraPie" class="tabcontent">
+                    <div class="playerDuelsPie tabItem"><canvas id="playerDuelsPie" class="canvas"></canvas></div>
+                </div>
+
+                <div id="ohoraBubble" class="tabcontent">
+                    <div class="interceptionsBubble tabItem"><canvas id="interceptionsBubble" class="canvas"></canvas></div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="footer">
+      <h4>Hibernian FC Signings made by Isla Virtue</h4>
+    </div>
+
+</body>
+
+</html>

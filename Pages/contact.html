@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hibs</title>
+
+  <!-- jQuery Import -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- DataTables imports -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css" />
+  <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+
+  <!-- Chart.js import -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Leaflet import -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- File Saver import -->
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin = "anonymous" referrerpolicy = "no-referrer"> </script>
+
+  <!-- UUID Import -->
+  <script src="https://unpkg.com/uuid@3.4.0/browser/v1.min.js"></script>
+  
+  <!-- For the main template -->
+  <link rel="stylesheet" href="../styles/index.css">
+
+  <!-- For the main styling -->
+  <link rel="stylesheet" href="../Styles/main.css">
+  
+  <!-- For the tabs styling -->
+  <link rel="stylesheet" href="../Styles/tabs.css">
+
+  <!-- For the form styling -->
+  <link rel="stylesheet" href="../Styles/contact.css">
+
+  <!-- For the specific javascript-->
+  <script src="../javascripts/contact.js"></script>
+
+  <!-- For the tabs javascript -->
+  <script src="../JavaScripts/tabs.js"></script>
+
+  <!-- For the header javascript-->
+  <script src="../javascripts/header.js"></script>
+
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="left-side side">
+      <div class="left-slide">
+
+        <div class="imageContainer">
+          <img src="../Assets/Sliders/bursik.png" id="img-1">
+          <div class="captionText"></div>
+        </div>
+  
+        <div class="imageContainer">
+          <img src="../Assets/Sliders/ohora.png" id="img-2">
+          <div class="captionText"></div>
+        </div>
+  
+        <div class="imageContainer">
+          <img src="../Assets/Sliders/ekpiteta.png" id="img-3">
+          <div class="captionText"></div>
+        </div>
+      
+      </div>
+    </div>
+
+    <div class="headerText">
+      <h1>Hibernian FC Signings</h1>
+      <h2>Contact Us</h2>
+    </div>
+
+    <div class="right-side side">
+      <div class="right-slide">
+
+        <div class="imageContainer">
+          <img src="../Assets/Sliders/bursikShirt.png" id="img-4">
+          <div class="captionText"></div>
+        </div>
+  
+        <div class="imageContainer">
+          <img src="../Assets/Sliders/ohoraShirt.png" id="img-5">
+          <div class="captionText"></div>
+        </div>
+  
+        <div class="imageContainer">
+          <img src="../Assets/Sliders/ekpitetaShirt.png" id="img-6">
+          <div class="captionText"></div>
+        </div>
+      
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="navigationBar">
+    <a href="bursik.html" class="bursikButton">Josef Bursik Stats</a>
+    <a href="ohora.html" class="oHoraButton">Warren O'Hora Stats</a>
+    <a href="ekpiteta.html" class="ekpitetaButton">Marvin Ekpiteta Stats</a>
+    <a href="index.html" class="rightTab">Home</a>
+    <a href="gallery.html" class="rightTab">Image Gallery</a> 
+    <a href="contact.html" class="rightTab">Contact Us</a>
+  </div>
+
+  <div class="main">
+
+    <div class="contact">
+        <form name="contact" onsubmit="return validateForm()">
+
+            <label for="fnameInput">First Name</label>
+            <input type="text" name="firstname" placeholder="John">
+            <p id="firstNameError">Please check this field is completed and includes no numbers or special characters!</p>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastname" placeholder="Doe">
+            <p id="lastNameError">Please check this field is completed and includes no numbers or special characters!</p>
+
+            <label for="country">Country</label>
+            <select name="country">
+                <option value="uk">United Kingdom</option>
+                <option value="aus">Australia</option>
+                <option value="usa">United States of America</option>
+                <option value="can">Canada</option>
+                <option value="mex">Mexico</option>
+            </select>
+
+            <label for="category">Category</label>
+            <select name="category">
+                <option value="request">Request Data</option>
+                <option value="suggest">Suggestion</option>
+                <option value="support">Support</option>
+                <option value="general">General/Other</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea name="message" placeholder="I noticed that in your website..."></textarea>
+            <p id="messageError">Please check this field has between 30 and 500 characters inclusive!</p>
+            
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footerText">
+      <h4>After submission, a plain text file will be downloaded to your machine with your response inside.</h4>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hibs</title>
+
+  <!-- jQuery Import -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- DataTables imports -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css" />
+  <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+
+  <!-- Chart.js import -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Leaflet import -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- For the main template -->
+  <link rel="stylesheet" href="../styles/index.css">
+
+  <!-- For the main styling -->
+  <link rel="stylesheet" href="../Styles/main.css">
+  
+  <!-- For the tabs styling -->
+  <link rel="stylesheet" href="../Styles/tabs.css">
+
+  <!-- For the specific javascript-->
+  <script src="../javascripts/gallery.js"></script>
+
+  <!-- For the tabs javascript -->
+  <script src="../JavaScripts/tabs.js"></script>
+
+  <!-- For the header javascript-->
+  <script src="../javascripts/header.js"></script>
+
+  <!-- For the slideshow stying -->
+  <link rel="stylesheet" href="../Styles/gallery.css">
+
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="left-side side">
+      <div class="left-slide">
+
+        <div class="imageContainer">
+          <img src="../Assets/Sliders/bursik.png" id="img-1">
+          <div class="captionText"></div>
+        </div>
+  
+        <div class="imageContainer">
+          <img src="../Assets/Sliders/ohora.png" id="img-2">
+          <div class="captionText"></div>
+        </div>
+  
+        <div class="imageContainer">
+          <img src="../Assets/Sliders/ekpiteta.png" id="img-3">
+          <div class="captionText"></div>
+        </div>
+      
+      </div>
+    </div>
+
+    <div class="headerText">
+      <h1>Hibernian FC Signings</h1>
+      <h2>Image Gallery</h2>
+    </div>
+
+    <div class="right-side side">
+      <div class="right-slide">
+
+        <div class="imageContainer">
+          <img src="../Assets/Sliders/bursikShirt.png" id="img-4">
+          <div class="captionText"></div>
+        </div>
+  
+        <div class="imageContainer">
+          <img src="../Assets/Sliders/ohoraShirt.png" id="img-5">
+          <div class="captionText"></div>
+        </div>
+  
+        <div class="imageContainer">
+          <img src="../Assets/Sliders/ekpitetaShirt.png" id="img-6">
+          <div class="captionText"></div>
+        </div>
+      
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="navigationBar">
+    <a href="bursik.html" class="bursikButton">Josef Bursik Stats</a>
+    <a href="ohora.html" class="oHoraButton">Warren O'Hora Stats</a>
+    <a href="ekpiteta.html" class="ekpitetaButton">Marvin Ekpiteta Stats</a>
+    <a href="index.html" class="rightTab">Home</a>
+    <a href="gallery.html" class="rightTab">Image Gallery</a> 
+    <a href="contact.html" class="rightTab">Contact Us</a>
+  </div>
+
+  <div class="main">
+
+    <div id="bursikGallery" class="gallery">
+
+      <button class="accordion">Welcome to Hibernian, Josef Bursik</button>
+
+      <div id="bursikWelcome" class="galleryWelcome gallerySlide panel">
+      
+        <div id="bursikWelcomeSlide" class="gallerySlide">
+          <br>
+            <div class="slideImage welcomeBursik fade" id="img-1">
+                <div class="number">1/4</div>
+                <img src="../Assets/Gallery/Bursik/Welcome/bursikLogo.jpg">
+            </div>
+            <div class="slideImage welcomeBursik fade" id="img-2">
+                <div class="number">2/4</div>
+                <img src="../Assets/Gallery/Bursik/Welcome/bursikGlove.jpg">
+            </div>
+            <div class="slideImage welcomeBursik fade" id="img-3">
+                <div class="number">3/4</div>
+                <img src="../Assets/Gallery/Bursik/Welcome/bursikTraining.jpg">
+            </div>
+            <div class="slideImage welcomeBursik fade" id="img-4">
+                <div class="number">4/4</div>
+                <img src="../Assets/Gallery/Bursik/Welcome/bursikNet.jpg">
+            </div>
+            <a class="previous" onclick="plusSlides(-1, 0, 'bursikGallery')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0, 'bursikGallery')">&#10095;</a>
+        </div>
+        <br>
+        <div class="dots" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 0, 'bursikGallery')"></span>
+            <span class="dot" onclick="currentSlide(2, 0, 'bursikGallery')"></span>
+            <span class="dot" onclick="currentSlide(3, 0, 'bursikGallery')"></span>
+            <span class="dot" onclick="currentSlide(4, 0, 'bursikGallery')"></span>
+        </div>
+      </div>
+
+      <button class="accordion">Josef Bursik Gets to Work</button>
+      <div id="bursikAction" class="galleryAction gallerySlide panel">
+        <br>
+        <div id="bursikActionSlide" class="gallerySlide">
+            <div class="slideImage actionBursik fade" id="img-5">
+                <div class="number">1/4</div>
+                <img src="../Assets/Gallery/Bursik/Action/bursikCatch.jpg">
+            </div>
+            <div class="slideImage actionBursik fade" id="img-6">
+                <div class="number">2/4</div>
+                <img src="../Assets/Gallery/Bursik/Action/bursikStand.jpg">
+            </div>
+            <div class="slideImage actionBursik fade" id="img-7">
+                <div class="number">3/4</div>
+                <img src="../Assets/Gallery/Bursik/Action/bursikRun.jpg">
+            </div>
+            <div class="slideImage actionBursik fade" id="img-8">
+                <div class="number">4/4</div>
+                <img src="../Assets/Gallery/Bursik/Action/bursikSquat.jpg">
+            </div>
+            <a class="previous" onclick="plusSlides(-1, 1, 'bursikGallery')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1, 'bursikGallery')">&#10095;</a>
+        </div>
+        <br>
+        <div class="dots" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 1, 'bursikGallery')"></span>
+            <span class="dot" onclick="currentSlide(2, 1, 'bursikGallery')"></span>
+            <span class="dot" onclick="currentSlide(3, 1, 'bursikGallery')"></span>
+            <span class="dot" onclick="currentSlide(4, 1, 'bursikGallery')"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="ohoraGallery" class="gallery">
+
+      <button class="accordion">Welcome to Hibernian, Warren O'Hora</button>
+      <div id="ohoraWelcome" class="galleryWelcome gallerySlide panel">
+        <br>
+        <div id="ohoraWelcomeSlide" class="gallerySlide">
+            <div class="slideImage welcomeOhora fade" id="img-1">
+                <div class="number">1/4</div>
+                <img src="../Assets/Gallery/Ohora/Welcome/ohoraTurn.jpg">
+            </div>
+            <div class="slideImage welcomeOhora fade" id="img-2">
+                <div class="number">2/4</div>
+                <img src="../Assets/Gallery/Ohora/Welcome/ohoraShirt.jpg">
+            </div>
+            <div class="slideImage welcomeOhora fade" id="img-3">
+                <div class="number">3/4</div>
+                <img src="../Assets/Gallery/Ohora/Welcome/ohoraSitting.jpg">
+            </div>
+            <div class="slideImage welcomeOhora fade" id="img-4">
+                <div class="number">4/4</div>
+                <img src="../Assets/Gallery/Ohora/Welcome/ohoraContract.jpg">
+            </div>
+            <a class="previous" onclick="plusSlides(-1, 0, 'ohoraGallery')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0, 'ohoraGallery')">&#10095;</a>
+        </div>
+        <br>
+        <div class="dots" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 0, 'ohoraGallery')"></span>
+            <span class="dot" onclick="currentSlide(2, 0, 'ohoraGallery')"></span>
+            <span class="dot" onclick="currentSlide(3, 0, 'ohoraGallery')"></span>
+            <span class="dot" onclick="currentSlide(4, 0, 'ohoraGallery')"></span>
+        </div>
+      </div>
+
+      <button class="accordion">Warren O'Hora Gets to Work</button>
+      <div id="ohoraAction" class="galleryAction gallerySlide panel">
+        <br>
+        <div id="ohoraActionSlide" class="gallerySlide">
+            <div class="slideImage actionOhora fade" id="img-5">
+                <div class="number">1/4</div>
+                <img src="../Assets/Gallery/Ohora/Action/ohoraKick.jpg">
+            </div>
+            <div class="slideImage actionOhora fade" id="img-6">
+                <div class="number">2/4</div>
+                <img src="../Assets/Gallery/Ohora/Action/ohoraWater.jpg">
+            </div>
+            <div class="slideImage actionOhora fade" id="img-7">
+                <div class="number">3/4</div>
+                <img src="../Assets/Gallery/Ohora/Action/ohoraRunning.jpg">
+            </div>
+            <div class="slideImage actionOhora fade" id="img-8">
+                <div class="number">4/4</div>
+                <img src="../Assets/Gallery/Ohora/Action/ohoraStanding.jpg">
+            </div>
+            <a class="previous" onclick="plusSlides(-1, 1, 'ohoraGallery')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1, 'ohoraGallery')">&#10095;</a>
+        </div>
+        <br>
+        <div class="dots" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 1, 'ohoraGallery')"></span>
+            <span class="dot" onclick="currentSlide(2, 1, 'ohoraGallery')"></span>
+            <span class="dot" onclick="currentSlide(3, 1, 'ohoraGallery')"></span>
+            <span class="dot" onclick="currentSlide(4, 1, 'ohoraGallery')"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="ekpitetaGallery" class="gallery">
+      <button class="accordion">Welcome to Hibernian, Marvin Ekpiteta</button>
+      <div id="ekpitetaWelcome" class="galleryWelcome gallerySlide panel">
+        <br>
+        <div id="ekpitetaWelcomeSlide" class="gallerySlide">
+            <div class="slideImage welcomeEkpiteta fade" id="img-1">
+                <div class="number">1/4</div>
+                <img src="../Assets/Gallery/Ekpiteta/Welcome/ekpitetaStand.jpg">
+            </div>
+            <div class="slideImage welcomeEkpiteta fade" id="img-2">
+                <div class="number">2/4</div>
+                <img src="../Assets/Gallery/Ekpiteta/Welcome/ekpitetaShirt.jpg">
+            </div>
+            <div class="slideImage welcomeEkpiteta fade" id="img-3">
+                <div class="number">3/4</div>
+                <img src="../Assets/Gallery/Ekpiteta/Welcome/ekpitetaFace.jpg">
+            </div>
+            <div class="slideImage welcomeEkpiteta fade" id="img-4">
+                <div class="number">4/4</div>
+                <img src="../Assets/Gallery/Ekpiteta/Welcome/ekpitetaSmile.jpg">
+            </div>
+            <a class="previous" onclick="plusSlides(-1, 0, 'ekpitetaGallery')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0, 'ekpitetaGallery')">&#10095;</a>
+        </div>
+        <br>
+        <div class="dots" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 0, 'ekpitetaGallery')"></span>
+            <span class="dot" onclick="currentSlide(2, 0, 'ekpitetaGallery')"></span>
+            <span class="dot" onclick="currentSlide(3, 0, 'ekpitetaGallery')"></span>
+            <span class="dot" onclick="currentSlide(4, 0, 'ekpitetaGallery')"></span>
+        </div>
+      </div>
+
+      <button class="accordion">Marvin Ekpiteta Gets to Work</button>
+      <div id="ekpitetaAction" class="galleryAction gallerySlide panel">
+        <br>
+        <div id="ekpitetaActionSlide" class="gallerySlide">
+            <div class="slideImage actionEkpiteta fade" id="img-5">
+                <div class="number">1/4</div>
+                <img src="../Assets/Gallery/Ekpiteta/Action/ekpitetaKick.jpg">
+            </div>
+            <div class="slideImage actionEkpiteta fade" id="img-6">
+                <div class="number">2/4</div>
+                <img src="../Assets/Gallery/Ekpiteta/Action/ekpitetaStanding.jpg">
+            </div>
+            <div class="slideImage actionEkpiteta fade" id="img-7">
+                <div class="number">3/4</div>
+                <img src="../Assets/Gallery/Ekpiteta/Action/ekpitetaDuel.jpg">
+            </div>
+            <a class="previous" onclick="plusSlides(-1, 1, 'ekpitetaGallery')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1, 'ekpitetaGallery')">&#10095;</a>
+        </div>
+        <br>
+        <div class="dots" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 1, 'ekpitetaGallery')"></span>
+            <span class="dot" onclick="currentSlide(2, 1, 'ekpitetaGallery')"></span>
+            <span class="dot" onclick="currentSlide(3, 1, 'ekpitetaGallery')"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footerText">
+      <h4>Images from Getty Images Used Non-Comercially With no Copyright Intended.</h4>
+    </div>
+  </div>
+</body>
+</html>
